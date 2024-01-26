@@ -1,15 +1,45 @@
+import { TbShoppingBag } from "react-icons/tb";
 import NikeLogo from "../assets/nike-logo.svg?react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
+
+const ROUTES = ["Home", "About", "Services", "Pricing", "Contact"];
 
 const Nav = () => {
+  const [isMobileMenSHown, setIsMobileMenuShown] = useState(false);
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="  flex flex-wrap items-center justify-between">
       <a href="#">
         <NikeLogo className=" h-20 w-20" />
       </a>
-      <button className=" hover:bg-gray-100 p-2 rounded-lg focus:ring-2 focus:ring-gray-200 ">
+      <button
+        className="lg:hidden hover:bg-gray-100 p-2 rounded-lg focus:ring-2 focus:ring-gray-200 "
+        onClick={() => setIsMobileMenuShown(!isMobileMenSHown)}
+      >
         <RxHamburgerMenu size={25} />
       </button>
+
+      <div
+        className={`${!isMobileMenSHown && "hidden"} w-full lg:block lg:w-auto`}
+      >
+        <ul className="lg:space-x-4 flex flex-col lg:flex-row  border-gray-100 text-lg border bg-gray-50 lg:bg-transparent lg:border-transparent rounded-lg p-5">
+          {ROUTES.map((route) => {
+            return (
+              <li
+                className={` rounded first:bg-blue-500 lg:first:bg-transparent  text-white lg:first:text-black [&:not(:first-child)]:hover:bg-gray-100 [&:not(:first-child)]:text-black cursor-pointer py-2 px-3 `}
+                key={route}
+              >
+                {route}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="fixed bottom-4 left-4 lg:static">
+        <div className="flex-center h-12 w-12 rounded-full bg-white shadow-md">
+          <TbShoppingBag />
+        </div>
+      </div>
     </nav>
   );
 };
