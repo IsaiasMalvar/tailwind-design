@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <nav className=" z-10 relative flex flex-wrap items-center justify-between">
       <a href="#">
-        <NikeLogo className=" h-20 w-20" />
+        <NikeLogo className=" h-20 w-20 " />
       </a>
       <button
         className="lg:hidden hover:bg-gray-100 p-2 rounded-lg focus:ring-2 focus:ring-gray-200 "
