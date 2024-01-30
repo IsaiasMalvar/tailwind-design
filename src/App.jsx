@@ -1,3 +1,4 @@
+import CartItem from "./components/CartItem";
 import Nav from "./components/Nav";
 import NewArrivalSection from "./components/NewArrivalSection";
 import ShoeDetail from "./components/ShoeDetail";
@@ -16,7 +17,14 @@ const App = () => {
       <Sidebar
         isOpen={isSideBarOpen}
         onClickClose={() => setIsSideBarOpen(false)}
-      />
+      >
+        <h2 className="text-2xl font-bold  mb-10">Cart</h2>
+        <CartItem item={SHOE_LIST[0]} />
+        <CartItem item={SHOE_LIST[0]} />
+        <CartItem item={SHOE_LIST[0]} />
+        <CartItem item={SHOE_LIST[0]} />
+        <CartItem item={SHOE_LIST[0]} />
+      </Sidebar>
     </div>
   );
 };
