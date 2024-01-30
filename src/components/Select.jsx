@@ -17,7 +17,7 @@ const Select = ({ title, options }) => {
           </option>
         ))}
       </select>
-      <div className="absolute bottom-2 top-0 right-0 flex-center pr-3">
+      <div className="pointer-events-none absolute bottom-2 top-0 right-0 flex-center pr-3">
         <MdKeyboardArrowDown />
       </div>
     </div>
