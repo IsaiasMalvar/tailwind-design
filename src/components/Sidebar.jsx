@@ -4,7 +4,7 @@ const Sidebar = ({ children, isOpen, onClickClose }) => {
   return (
     <div>
       <div
-        className={`w-full h-full md:w-[50%] lg:w-[35%] bg-white fixed z-50 right-0 top-0 transition duration-300 transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`p-5 overflow-y-auto w-full h-full md:w-[50%] lg:w-[35%] bg-white fixed z-50 right-0 top-0 transition duration-300 transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <button
           onClick={onClickClose}
