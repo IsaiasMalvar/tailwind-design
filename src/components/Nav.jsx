@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { TbShoppingBag } from "react-icons/tb";
 import NikeLogo from "../assets/nike-logo.svg?react";
 import { RxHamburgerMenu } from "react-icons/rx";
