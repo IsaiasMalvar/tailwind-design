@@ -1,12 +1,15 @@
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { twMerge } from "tw-merge";
 /* eslint-disable react/prop-types */
 
-const Select = ({ title, options }) => {
+const Select = ({ title, options, className }) => {
   return (
     <div className="relative">
       <select
         defaultValue={""}
-        className="w-24 appearance-none border border-gray-300 bg-white p-4"
+        className={twMerge(
+          ` appearance-none border border-gray-300 bg-white p-4 w-24 ${className} `
+        )}
       >
         <option value={""} disabled hidden>
           {title}
